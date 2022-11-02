@@ -1,7 +1,8 @@
-const { application } = require('express');
+
 const express = require('express')
 const app = express()
-const methodOverride = require('./models/pokemon,js')
+const methodOverride = require('method-override')
+const pokemon = require('./models/pokemon.js')
 const PORT = 3500
 
 app.use(express.urlencoded({extended: false}));
