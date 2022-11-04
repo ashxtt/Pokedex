@@ -6,11 +6,21 @@
         <title>Pokedex</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <%- include('./partials/head.ejs')%>
     </head>
     <body>
         <h1>Pokedex</h1>
         <button><a href="/pokemon/new">Add Pokemon</a></button>
-        
+       
+        <% for(let i=0; i < pokemons.length; i++) { %>
+            <div class="poke-info">
+                <a href='/pokemon/<%= i %>'><img src=<%= pokemons[i].img%>></a>
+                <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete"/>
+                    <button><a href="/pokemon/<%=i%>/edit">Edit</a></button>
+                </form>
+                
+            </div>
+        <% } %>
     </body>
 </html>
