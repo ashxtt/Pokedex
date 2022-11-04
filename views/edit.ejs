@@ -3,13 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Edit Your Pokemon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-        
-
+        <h1>Edit Pokemon</h1>
+        <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%= allPokemon.name %>" />
+            Type: <input type="text" name="type" value="<%= allPokemon.type %>" />
+            Image: <input type="text" name="img" value="<%= allPokemon.img %>" />
+            HP: <input type="text" name="hp" value="<%= allPokemon.stats.hp %>" />
+            Attack: <input type="text" name="attack" value="<%= allPokemon.stats.attack %>" />
+            Defense: <input type="text" name="defense" value="<%= allPokemon.stats.defense %>" />
+            Special Attack: <input type="text" name="spattack" value="<%= allPokemon.stats.spattack %>" />
+            Special Defense: <input type="text" name="spdefense" value="<%= allPokemon.stats.spdefense %>" />
+            Speed: <input type="text" name="speed" value="<%= allPokemon.stats.speed %>" />
+            <input type="submit" value="Submit Changes"/>
+        </form>
+        <%- include('/.partials/footer.ejs')%>
     </body>
 </html>

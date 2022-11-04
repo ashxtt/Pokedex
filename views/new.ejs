@@ -6,6 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%- include('./partials/head.ejs')%>
     </head>
     <body>
         <style>
@@ -13,7 +14,16 @@
         </style>
         <h1>Add Pokemon</h1>
         <form action="/pokemon" method="POST">
-            image: <input type="text" name="img" placeholder="image"/>
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="img" placeholder="image URL">
+            <input type="text" name="type" placeholder="type">
+            <br>
+            Stats:
+            <input type="text" name="hp" placeholder="hp">
+            <input type="text" name="attack" placeholder="attack">
+            <input type="text" name="defense" placeholder="defense">
+            <input type="text" name="speed" placeholder="speed">
+            <input type="submit" value="create">
         </form>
     </body>
 </html>
