@@ -6,22 +6,22 @@
         <title>Edit Your Pokemon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+       
     </head>
     <body>
-        <h1>Edit a Pokemon</h1>
-        <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%= pokemons.name %>" />
-            Type: <input type="text" name="type" value="<%= pokemons.type %>" />
-            Image: <input type="text" name="img" value="<%= pokemons.img %>" />
-            HP: <input type="text" name="hp" value="<%= pokemons.stats.hp %>" />
-            Attack: <input type="text" name="attack" value="<%= pokemons.stats.attack %>" />
-            Defense: <input type="text" name="defense" value="<%= pokemons.stats.defense %>" />
-            Special Attack: <input type="text" name="spattack" value="<%= pokemons.stats.spattack %>" />
-            Special Defense: <input type="text" name="spdefense" value="<%= pokemons.stats.spdefense %>" />
-            Speed: <input type="text" name="speed" value="<%= pokemons.stats.speed %>" />
-            <input type="submit" value="Submit Changes"/>
-        </form>
+        <div class="container">
+            <h1>Edit a Pokemon</h1>
+            <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
+                Name: <input type="text" name="name" value="<%= pokemons.name %>"/> <br>
+                Type: <input type="text" name="type" value="<%= pokemons.type %>"/> <br>
+                Image: <input type="text" name="img" value="<%= pokemons.img %>"/> <br>
+                HP: <input type="text" name="hp" value="<%= pokemons.stats.hp %>"/> <br>
+                Attack: <input type="text" name="attack" value="<%= pokemons.stats.attack %>"/> <br>
+                Defense: <input type="text" name="defense" value="<%= pokemons.stats.defense %>"/> <br>
+                Speed: <input type="text" name="speed" value="<%= pokemons.stats.speed %>"/> <br>
+                <input type="submit" value="Submit Changes"/>
+            </form> 
+        </div>
         <nav>
             <a href="/pokemon">Back to Pokedex</a>
         </nav>

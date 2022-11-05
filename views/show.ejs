@@ -7,40 +7,22 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <%- include('./partials/head.ejs')%>
+
     </head>
     <body>
         <div class="container">
             <a href="/pokemon">Back</a>
-            <h1><%= pokemons.name %></h1>
+            <h1> <%= pokemons.name %></h1>
             <img src=<%= pokemons.img %>>
             <ul>
-                <li>Type:
-                    <%= pokemons.type %>
-                </li>
+                <li>Type: <%= pokemons.type %></li>
             </ul>
             <ul>
-                <li>
-                    HP: <%= pokemons.stats.hp %> 
-                </li>
-                <li>
-                    Attack: <%= pokemons.stats.attack %>
-                </li>
-                <li>
-                    Defense <%= pokemons.stats.defense %>
-                </li>
-                <li>
-                    Special Attack: <%= pokemons.stats.spattack %>
-                </li>
-                <li>
-                    Special Defense: <%= pokemons.stats.spdefense %>
-                </li>
-                <li>
-                    Speed: <%= pokemons.stats.speed %>
-                </li>
+                <li> HP: <%= pokemons.stats.hp %> </li>
+                <li>Attack: <%= pokemons.stats.attack %></li>
+                <li> Defense <%= pokemons.stats.defense %></li>
+                <li> Speed: <%= pokemons.stats.speed %></li>
             </ul>
         </div>
-
     </body>
 </html>

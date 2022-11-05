@@ -21,13 +21,12 @@ app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs')
 })
 
+//CREATE
 app.post('/pokemon', (req, res) => {
     let stats = {
         hp: req.body.hp,
         attack: req.body.attack,
         defense: req.body.defense,
-        spattack: req.body.spattack,
-        spdefense: req.body.spdefense,
         speed: req.body.speed,
     }
     let newPokemon = {
@@ -39,7 +38,6 @@ app.post('/pokemon', (req, res) => {
     pokemon.push(newPokemon)
     res.redirect('/pokemon')
 })
-
 
 
 //DELETE
@@ -63,6 +61,7 @@ app.get('/pokemon/:id/edit', (req, res) => {
     
 })
 
+//SHOW
 app.get('/pokemon/:id', (req, res) => {
     res.render('show.ejs', {
         pokemons: pokemon[req.params.id],

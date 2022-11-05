@@ -6,7 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <%- include('./partials/head.ejs')%>
+
     </head>
     <body>
         <style>
@@ -14,14 +14,12 @@
         </style>
         <h1>Add Pokemon</h1>
         <form action="/pokemon" method="POST">
-            Name: <input type="text" name="name" placeholder="Pokemon" />
-            Type: <input type="text" name="type" placeholder="Pokemon Type" />
-            Image: <input type="text" name="img" placeholder="Image" />
+            Name: <input type="text" name="name" placeholder="Pokemon"/>
+            Type: <input type="text" name="type" placeholder="Pokemon Type"/>
+            Image: <input type="text" name="img" placeholder="Image"/>
             HP: <input type="text" name="hp" placeholder="HP"/>
             Attack: <input type="text" name="attack" placeholder="Attack"/>
             Defense: <input type="text" name="defense" placeholder="Defense"/>
-            Special Attack: <input type="text" name="spattack" placeholder="Special Attack"/>
-            Special Defense: <input type="text" name="spdefense" placeholder="Special Defense"/>
             Speed: <input type="text" name="speed" placeholder="Speed"/>
             <input type="submit" value="Create Pokemon"/>
         </form>
