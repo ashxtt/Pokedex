@@ -9,19 +9,21 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>Edit Pokemon</h1>
+        <h1>Edit a Pokemon</h1>
         <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%= allPokemon.name %>" />
-            Type: <input type="text" name="type" value="<%= allPokemon.type %>" />
-            Image: <input type="text" name="img" value="<%= allPokemon.img %>" />
-            HP: <input type="text" name="hp" value="<%= allPokemon.stats.hp %>" />
-            Attack: <input type="text" name="attack" value="<%= allPokemon.stats.attack %>" />
-            Defense: <input type="text" name="defense" value="<%= allPokemon.stats.defense %>" />
-            Special Attack: <input type="text" name="spattack" value="<%= allPokemon.stats.spattack %>" />
-            Special Defense: <input type="text" name="spdefense" value="<%= allPokemon.stats.spdefense %>" />
-            Speed: <input type="text" name="speed" value="<%= allPokemon.stats.speed %>" />
+            Name: <input type="text" name="name" value="<%= pokemons.name %>" />
+            Type: <input type="text" name="type" value="<%= pokemons.type %>" />
+            Image: <input type="text" name="img" value="<%= pokemons.img %>" />
+            HP: <input type="text" name="hp" value="<%= pokemons.stats.hp %>" />
+            Attack: <input type="text" name="attack" value="<%= pokemons.stats.attack %>" />
+            Defense: <input type="text" name="defense" value="<%= pokemons.stats.defense %>" />
+            Special Attack: <input type="text" name="spattack" value="<%= pokemons.stats.spattack %>" />
+            Special Defense: <input type="text" name="spdefense" value="<%= pokemons.stats.spdefense %>" />
+            Speed: <input type="text" name="speed" value="<%= pokemons.stats.speed %>" />
             <input type="submit" value="Submit Changes"/>
         </form>
-        <%- include('/.partials/footer.ejs')%>
+        <nav>
+            <a href="/pokemon">Back to Pokedex</a>
+        </nav>
     </body>
 </html>

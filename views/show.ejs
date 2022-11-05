@@ -12,23 +12,34 @@
     </head>
     <body>
         <div class="container">
-            <h1></h1>
-            <img src=<%= allPokemon.img>
-            <ul class="type">
-                <% for(let i=0; i < data.type.length; i++) { %>
-                    <li>
-                        <%= data.type[i]%>
-                    </li>
-                <% } %>
+            <a href="/pokemon">Back</a>
+            <h1><%= pokemons.name %></h1>
+            <img src=<%= pokemons.img %>>
+            <ul>
+                <li>Type:
+                    <%= pokemons.type %>
+                </li>
             </ul>
-            <br>
-            <ul class="stats">
-                <li>HP: <%= data.stats.hp%></li>
-                <li>Attack: <%= data.stats.attack%></li>
-                <li>Defense: <%= data.stats.defense%></li>
-                <li>Speed: <%= data.stats.speed%></li>
+            <ul>
+                <li>
+                    HP: <%= pokemons.stats.hp %> 
+                </li>
+                <li>
+                    Attack: <%= pokemons.stats.attack %>
+                </li>
+                <li>
+                    Defense <%= pokemons.stats.defense %>
+                </li>
+                <li>
+                    Special Attack: <%= pokemons.stats.spattack %>
+                </li>
+                <li>
+                    Special Defense: <%= pokemons.stats.spdefense %>
+                </li>
+                <li>
+                    Speed: <%= pokemons.stats.speed %>
+                </li>
             </ul>
-            <a href="/pokemon">BACK</a>
         </div>
 
     </body>
