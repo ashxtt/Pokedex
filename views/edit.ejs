@@ -11,14 +11,47 @@
     <body>
         <style>
             body{
-                background-color: #8EB3AD;
+                background-color: #45464A;
             }
+
             h1{
-                text-align: center;             
+                text-align: center;
+                color: white;             
             }
+
             form{
                 display: grid;
                 justify-content: center;
+                padding:5px;
+                color:white;
+            }
+            input{
+                padding:3px;
+            }
+
+            .back{
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                padding:5px;
+                border: 5px solid black;
+                border-radius: 20px;
+            }
+
+            .back:hover{
+                border: 5px solid #F714BE;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            .submit{
+                border: 3px solid black;
+                border-radius: 3px;
+            }
+            .submit:hover{
+                border: 3px solid #F714BE;
             }
         </style>
         <div class="container">
@@ -31,9 +64,9 @@
                 Attack: <input type="text" name="attack" value="<%= pokemons.stats.attack %>"/> <br>
                 Defense: <input type="text" name="defense" value="<%= pokemons.stats.defense %>"/> <br>
                 Speed: <input type="text" name="speed" value="<%= pokemons.stats.speed %>"/> <br>
-                <input type="submit" value="Submit Changes"/>
+                <input class="submit" type="submit" value="OK!"/>
             </form> 
         </div>
-        <button><a href="/pokemon">Back to Pokedex</a></button>
+        <button class="back"><a href="/pokemon">Back to Pokedex</a></button>
     </body>
 </html>
