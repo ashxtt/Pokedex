@@ -4,25 +4,97 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Pokemon Info</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
     <body>
+        <style>
+            body{
+                margin:auto;
+                background-color: #222520;
+            }
+            .container{
+
+                
+            }
+            h1{
+               text-align: center;
+               color:white;
+            }
+            img{
+                margin:auto;
+                display: flex;
+                justify-self: center;
+               width:200px;
+               height:200px;
+               border-color: black;
+               border-radius: 40px;
+               border-style: ridge;
+            }
+            ul{
+                margin: auto;
+                display: grid;
+                justify-content: center;
+                flex-direction: column;
+                gap:10px;
+                padding:10px;
+            }
+            li{
+                color: white;
+            }
+
+            .back{
+                margin: auto;
+                padding:5px;
+                border: 3px solid black;
+                border-radius: 5px;
+                color: black;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            .back:hover{
+                border: 3px solid #9EDDFF;
+                box-shadow: 2px 2px 5px #D6B2EE;
+            }
+            a{
+                text-decoration: none;
+            }
+
+            .water{
+                color:#BEFDF2;
+                font-size: 20px;
+            }
+            .hp{
+                color:#00E617;
+                font-size: 20px;
+            }
+            .attack{
+                font-size: 20px;
+                color:#E60000;
+            }
+            .defense{
+                font-size: 20px;
+                color:#FFCD5E;
+            }
+            .speed{
+                font-size: 20px;
+                color:#AF5EAF;
+            }
+        </style>
         <div class="container">
-            <a href="/pokemon">Back</a>
             <h1> <%= pokemons.name %></h1>
             <img src=<%= pokemons.img %>>
             <ul>
-                <li>Type: <%= pokemons.type %></li>
+                <li>Type: <span class="water"><%= pokemons.type %></span></li>
+                <li> HP: <span class="hp"><%= pokemons.stats.hp %></span></li>
+                <li>Attack: <span class="attack"><%= pokemons.stats.attack %></span></li>
+                <li> Defense <span class="defense"><%= pokemons.stats.defense %></span></li>
+                <li> Speed: <span class="speed"><%= pokemons.stats.speed %></span></li>
             </ul>
-            <ul>
-                <li> HP: <%= pokemons.stats.hp %> </li>
-                <li>Attack: <%= pokemons.stats.attack %></li>
-                <li> Defense <%= pokemons.stats.defense %></li>
-                <li> Speed: <%= pokemons.stats.speed %></li>
-            </ul>
+            <button class="back"><a href="/pokemon">Back</a></button>
         </div>
     </body>
 </html>

@@ -3,14 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Edit Your Pokemon</title>
+        <title>Edit Pokemon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
     </head>
     <body>
+        <style>
+            body{
+                background-color: #8EB3AD;
+            }
+            h1{
+                text-align: center;             
+            }
+            form{
+                display: grid;
+                justify-content: center;
+            }
+        </style>
         <div class="container">
-            <h1>Edit a Pokemon</h1>
+            <h1>Edit Pokemon</h1>
             <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
                 Name: <input type="text" name="name" value="<%= pokemons.name %>"/> <br>
                 Type: <input type="text" name="type" value="<%= pokemons.type %>"/> <br>
@@ -22,8 +34,6 @@
                 <input type="submit" value="Submit Changes"/>
             </form> 
         </div>
-        <nav>
-            <a href="/pokemon">Back to Pokedex</a>
-        </nav>
+        <button><a href="/pokemon">Back to Pokedex</a></button>
     </body>
 </html>

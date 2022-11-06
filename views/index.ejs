@@ -9,16 +9,63 @@
      
     </head>
     <body>
+        <style>
+            body{
+                background-color: #0335E9;
+            }
+
+            .add{
+                width:70px;
+                height:40px;
+                background-color: #393A3B;
+            }
+            .add:hover{
+                border: #66FF00;
+                border-style: groove;
+            }
+
+            .edit{
+                background-color: #393A3B;
+            }
+            .edit:hover{
+                border: #66FF00;
+                border-style: groove;
+            }
+            .delete{
+                background-color: #393A3B;
+                color: white;
+            }
+            .delete:hover{
+                border: #66FF00;
+                border-style: groove;
+            }
+            
+            
+
+            img{
+                border: #393A3B;
+                border-style: groove;
+                border-radius: 200px;
+                margin: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            div{
+                display:flex;
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+        </style>
         <h1>Pokedex</h1>
-        <button><a href="/pokemon/new">Add Pokemon</a></button>
-    
+        <button class="add"><a href="/pokemon/new">Add Pokemon</a></button>
         <% for(let i=0; i < pokemons.length; i++) { %>
            <div>
             <a href='/pokemon/<%= i %>'><img src=<%= pokemons[i].img%>></a>
-            
             <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
-                <input type="submit" value="DELETE"/>
-                <button><a href="/pokemon/<%=i%>/edit">EDIT</a></button>
+                <input class="delete" type="submit" value="DELETE"/>
+                <button class="edit"><a class="line" href="/pokemon/<%=i%>/edit">EDIT</a></button>
             </form>
         </div> 
         <% } %>

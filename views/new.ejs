@@ -3,28 +3,49 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>New Pokemon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
     <body>
         <style>
+            body{
+                background-color: #FF0022;
+            }
+            h1{
+                color:white;
+            }
 
+           .create{
+            width: 5rem;
+            height: 1.7rem;
+            background-color: #384445;
+            font-size: 15px;
+            color:white;
+           }
+           .back{
+            background-color: #384445;
+            margin: 10px;
+            width: 5.8rem;
+            height: 2.5rem;
+           }
+           a{
+            text-decoration: none;
+            color:white;
+           }
         </style>
         <h1>Add Pokemon</h1>
+        <button class="back"><a href="/pokemon">Back to Pokedex</a> </button> 
         <form action="/pokemon" method="POST">
-            Name: <input type="text" name="name" placeholder="Pokemon"/>
-            Type: <input type="text" name="type" placeholder="Pokemon Type"/>
-            Image: <input type="text" name="img" placeholder="Image"/>
-            HP: <input type="text" name="hp" placeholder="HP"/>
-            Attack: <input type="text" name="attack" placeholder="Attack"/>
-            Defense: <input type="text" name="defense" placeholder="Defense"/>
-            Speed: <input type="text" name="speed" placeholder="Speed"/>
-            <input type="submit" value="Create Pokemon"/>
+            Name: <input type="text" name="name" placeholder="Pokemon"/> <br> <br>
+            Type: <input type="text" name="type" placeholder="Pokemon Type"/> <br> <br>
+            Image: <input type="text" name="img" placeholder="Image"/> <br> <br>
+            HP: <input type="text" name="hp" placeholder="HP"/> <br> <br>
+            Attack: <input type="text" name="attack" placeholder="Attack"/> <br> <br>
+            Defense: <input type="text" name="defense" placeholder="Defense"/> <br> <br>
+            Speed: <input type="text" name="speed" placeholder="Speed"/> <br> <br>
+            <input class="create" type="submit" value="CREATE"/>
         </form>
-        <nav>
-            <a href="/pokemon">Back to Pokedex</a>
-        </nav>
     </body>
 </html>
