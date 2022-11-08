@@ -16,13 +16,8 @@ app.get('/pokemon', (req, res) => {
     })
 })
 
-//NEW
-app.get('/pokemon/new', (req, res) => {
-    res.render('new.ejs')
-})
-
-//PUT ROUTE TO UPDATE DATABASE
-app.put('/pokemon/:id', (res, req)=>{
+//update
+app.put('/pokemon/:id', (req, res) => {
     let stats = {
         hp: req.body.hp,
         attack: req.body.attack,
@@ -35,11 +30,11 @@ app.put('/pokemon/:id', (res, req)=>{
         type: req.body.type,
         stats: stats,
     }
-    //pass params
+    //TODO: pass param
     pokemon[req.params.id] = newPokemon
     res.redirect('/pokemon')
-    
 })
+
 
 //CREATE
 app.post('/pokemon', (req, res) => {
@@ -59,17 +54,9 @@ app.post('/pokemon', (req, res) => {
     res.redirect('/pokemon')
 })
 
-
-//DELETE
-app.delete('/pokemon/:id', (req, res) => {
-    pokemon.splice(req.params.id,1)
-    res.redirect('/pokemon')
-})
-
-//UPDATE
-app.put("/pokemon/:id", (req, res) => {
-    pokemons: pokemon[req.params.id] = req.params.id
-    res.redirect("/pokemon")
+//NEW
+app.get('/pokemon/new', (req, res) => {
+    res.render('new.ejs')
 })
 
 //EDIT
@@ -80,6 +67,13 @@ app.get('/pokemon/:id/edit', (req, res) => {
     })
     
 })
+
+//DELETE
+app.delete('/pokemon/:id', (req, res) => {
+    pokemon.splice(req.params.id,1)
+    res.redirect('/pokemon')
+})
+
 
 //SHOW
 app.get('/pokemon/:id', (req, res) => {
